@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Tokens & Style Guide</title>
+    <link href="./dist/output.css" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-cover bg-center bg-indigo-50" style="background-image: url('public/images/achtergrond.jpg');">
+    
+    <div class="bg-indigo-30/70 backdrop-blur-sm min-h-screen">
+        
+        <header class="bg-white shadow-md">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+                <h1 class="text-2xl font-bold text-gray-900">
+                    Design Tokens & Style Guide
+                </h1>
+                
+                <div class="flex space-x-3 items-center"> 
+                
+                    <div class="relative inline-block text-left" x-data="{ open: false }">
+                        <button @click="open = !open" type="button" class="
+                            inline-flex justify-center rounded-md border border-gray-300 
+                            shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 
+                            hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 
+                            focus:ring-indigo-500 focus:ring-offset-gray-100
+                        " id="menu-button" aria-expanded="true" aria-haspopup="true">
+                            Weken Overzicht
+                            <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </button>
+
+                        <div x-show="open" 
+                            @click.away="open = false"
+                            x-transition:enter="transition ease-out duration-100" 
+                            x-transition:enter-start="transform opacity-0 scale-95" 
+                            x-transition:enter-end="transform opacity-100 scale-100" 
+                            x-transition:leave="transition ease-in duration-75" 
+                            x-transition:leave-start="transform opacity-100 scale-100" 
+                            x-transition:leave-end="transform opacity-0 scale-95" 
+                            class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-10 max-h-60 overflow-y-scroll" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+
+                            <div class="py-1" role="none">
+                                <a href="week_1.html" class="block px-4 py-2 text-sm text-gray-900 hover:bg-gray-200" role="menuitem" tabindex="-1">Week 1</a>
+                                
+                                <a href="week_2.html" class="block px-4 py-2 text-sm text-gray-900 hover:bg-gray-200" role="menuitem" tabindex="-1">Week 2</a>
+                                <a href="week_3.html" class="block px-4 py-2 text-sm text-gray-900 hover:bg-gray-200" role="menuitem" tabindex="-1">Week 3</a>
+                                <a href="week_4.html" class="block px-4 py-2 text-sm text-gray-900 hover:bg-gray-200" role="menuitem" tabindex="-1">Week 4</a>
+                                <a href="week_5.html" class="block px-4 py-2 text-sm text-gray-900 hover:bg-gray-200" role="menuitem" tabindex="-1">Week 5</a>
+                                <a href="week_6.html" class="block px-4 py-3 text-sm text-gray-900 hover:bg-gray-200" role="menuitem" tabindex="-1">Week 6</a> 
+                               
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-400 cursor-default hover:bg-transparent" role="menuitem" tabindex="-1">Week 7: Herfstvakantie</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-400 cursor-default hover:bg-transparent" role="menuitem" tabindex="-1">Week 8: Toetsweek</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-400 cursor-default hover:bg-transparent" role="menuitem" tabindex="-1">Week 9: Brugdag</a>
+
+                                <a href="week_10.html" class="block px-4 py-2 text-sm text-gray-900 hover:bg-gray-200" role="menuitem" tabindex="-1">Week 10</a>
+                                <a href="week_11.html" class="block px-4 py-2 text-sm text-gray-900 hover:bg-gray-200" role="menuitem" tabindex="-1">Week 11</a>
+                                <a href="week_12.html" class="block px-4 py-3 text-sm text-gray-900 hover:bg-gray-200" role="menuitem" tabindex="-1">Week 12</a>
+
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-400 cursor-default hover:bg-transparent" role="menuitem" tabindex="-1">Week 13: Toekomstige Week</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-400 cursor-default hover:bg-transparent" role="menuitem" tabindex="-1">Week 14: Toekomstige Week</a>
+                                
+                                <a href="index.html" class="block px-4 py-2 text-sm text-blue-600 border-t mt-1 hover:bg-gray-100" role="menuitem" tabindex="-1">Naar Hoofdpagina</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="style_guide.html" class="
+                        inline-flex justify-center rounded-md border border-indigo-500 
+                        shadow-sm px-4 py-2 bg-indigo-50 text-sm font-bold text-indigo-700 
+                        focus:outline-none focus:ring-2 focus:ring-offset-2 
+                        focus:ring-indigo-500 focus:ring-offset-gray-100
+                    ">
+                        🎨 Style Guide (Huidig)
+                    </a>
+
+                </div>
+                </div>
+        </header>
+
+        <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            
+            <div class="mb-10 border-b border-gray-200 pb-4">
+                <h2 class="text-4xl font-extrabold text-gray-900 leading-tight">
+                    De Visuele Fundamenten
+                </h2>
+                <p class="text-lg text-gray-700 mt-2">
+                    Een overzicht van de kleuren, typografie en schaalverdeling gebruikt in dit portfolio en het 'Lost in Tra(i)nslation' ontwerp.
+                </p>
+            </div>
+
+            <section class="bg-white p-8 rounded-xl shadow-xl mb-12">
+                <h3 class="text-3xl font-bold text-gray-800 mb-6 border-b pb-2">
+                    1. Kleur Palet
+                </h3>
+                <p class="mb-6 text-gray-700">
+                    Het palet is gebaseerd op een betrouwbaar, modern kleurenschema dat is geoptimaliseerd voor leesbaarheid (contrast) en het NS-thema.
+                </p>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    
+                    <div class="space-y-2">
+                        <div class="h-20 bg-indigo-600 rounded-lg shadow-md"></div>
+                        <p class="text-sm font-semibold text-gray-900">Primair (Actie)</p>
+                        <p class="text-xs text-gray-500">Tailwind: indigo-600</p>
+                    </div>
+
+                    <div class="space-y-2">
+                        <div class="h-20 bg-blue-500 rounded-lg shadow-md"></div>
+                        <p class="text-sm font-semibold text-gray-900">Secundair (Accent)</p>
+                        <p class="text-xs text-gray-500">Tailwind: blue-500</p>
+                    </div>
+
+                    <div class="space-y-2">
+                        <div class="h-20 bg-gray-900 rounded-lg shadow-md"></div>
+                        <p class="text-sm font-semibold text-gray-900">Tekst (Body)</p>
+                        <p class="text-xs text-gray-500">Tailwind: gray-900</p>
+                    </div>
+
+                    <div class="space-y-2">
+                        <div class="h-20 bg-gray-50 border border-gray-200 rounded-lg shadow-md"></div>
+                        <p class="text-sm font-semibold text-gray-900">Achtergrond</p>
+                        <p class="text-xs text-gray-500">Tailwind: gray-50 / white</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-white p-8 rounded-xl shadow-xl mb-12">
+                <h3 class="text-3xl font-bold text-gray-800 mb-6 border-b pb-2">
+                    2. Typografie & Schaal
+                </h3>
+                <p class="mb-6 text-gray-700">
+                    Er is gebruikgemaakt van de standaard sans-serif fontstack van **Tailwind** (`font-sans`), wat zorgt voor een hoge leesbaarheid op alle schermen. De schaal is consistent toegepast.
+                </p>
+
+                <div class="space-y-4">
+                    <h1 class="text-4xl font-extrabold text-gray-900 border-l-4 border-indigo-600 pl-4">
+                        H1 - Titel (text-4xl font-extrabold)
+                    </h1>
+                    <h2 class="text-3xl font-bold text-gray-800 border-l-4 border-blue-500 pl-4">
+                        H2 - Sectie Hoofd (text-3xl font-bold)
+                    </h2>
+                    <h3 class="text-xl font-semibold text-gray-700 border-l-4 border-gray-300 pl-4">
+                        H3 - Subtitel (text-xl font-semibold)
+                    </h3>
+                    <p class="text-base text-gray-600 leading-relaxed pt-2">
+                        Body Tekst - Dit is de standaard tekstgrootte voor het lezen van lange paragrafen. Het is ontworpen om ontspannen en helder te zijn op alle apparaten. (text-base)
+                    </p>
+                </div>
+            </section>
+
+            <section class="bg-white p-8 rounded-xl shadow-xl">
+                <h3 class="text-3xl font-bold text-gray-800 mb-6 border-b pb-2">
+                    3. Ruimte & Schaal
+                </h3>
+                <div class="space-y-4 text-gray-700 leading-relaxed">
+                    <p>
+                        De schaalverdeling voor marges, padding en gaps is consistent gebaseerd op de **Tailwind CSS spacing scale** (die werkt met veelvouden van 4px).
+                    </p>
+                    <p>
+                        <strong>Voorbeelden:</strong>
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 pl-4">
+                        <li>
+                            Kleine Ruimte (m-2): Gebruikt voor knoppen of inline elementen (8px).
+                        </li>
+                        <li>
+                            Gemiddelde Ruimte (p-6): Standaard padding in kaartcomponenten (24px).
+                        </li>
+                        <li>
+                            Grote Ruimte (mb-12): Wordt gebruikt om secties verticaal te scheiden (48px).
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+        </main>
+        
+        <footer class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center mt-8">
+            <a href="index.html" class="
+                text-base font-semibold text-blue-600 hover:text-blue-800 
+                bg-white shadow-md px-4 py-2 rounded-full 
+                transition duration-200 
+                inline-block hover:shadow-lg
+            ">
+                &larr; Terug naar het Overzicht
+            </a>
+        </footer>
+
+    </div>
+
+</body>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</html>

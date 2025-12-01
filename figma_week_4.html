@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figma Mid-Fi Week 4</title>
+    <link href="./dist/output.css" rel="stylesheet">
+</head>
+<body x-data="{ imgModal: null }" @keydown.escape="imgModal = null" class="min-h-screen bg-cover bg-center bg-indigo-50" style="background-image: url('public/images/achtergrond.jpg');">
+    
+    <div class="bg-indigo-50/40 backdrop-blur-md min-h-screen">
+        
+        <header class="bg-white shadow-md">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+                <h1 class="text-2xl font-bold text-gray-900">
+                    Mid-Fidelity Ontwerpen
+                </h1>
+                
+                <a href="week_4.html" class="
+                    text-sm font-medium text-gray-700 hover:text-indigo-600 
+                    transition duration-200
+                ">
+                    &larr; Terug naar Week 4
+                </a>
+            </div>
+        </header>
+
+        <main class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            
+            <div class="mb-12 border-b border-gray-200 pb-4 text-center">
+                <h2 class="text-4xl font-extrabold text-gray-900 leading-tight">
+                    Figma Prototypes
+                </h2>
+                <p class="text-lg text-gray-700 mt-2">
+                    Een diepere blik op de gedigitaliseerde schermen en de stijlkeuzes. Klik op de afbeeldingen om ze te vergroten.
+                </p>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden mb-12">
+                <div class="flex flex-col lg:flex-row">
+                    
+                    <div @click="imgModal = 'public/images/figma_2.jpg'" class="lg:w-2/3 bg-gray-200 flex items-center justify-center p-6 cursor-zoom-in hover:opacity-90 transition">
+                        <img src="public/images/figma_2.jpg" alt="Figma borden" class="object-contain w-full h-auto shadow-md rounded-lg max-h-[600px]">
+                    </div>
+
+                    <div class="lg:w-1/3 p-8 flex flex-col justify-center">
+                        <div class="uppercase tracking-wide text-sm text-indigo-600 font-bold">Prototype</div>
+                        <h3 class="mt-2 text-2xl leading-8 font-extrabold text-gray-900">Mid-Fidelity Schermen</h3>
+                        <p class="mt-4 text-gray-600 leading-relaxed">
+                            Hier zie je de digitale vertaling van de schetsen. De focus lag op het positioneren van de elementen en het creëren van een logische hiërarchie. De interface is strak en functioneel gehouden.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                <div class="flex flex-col lg:flex-row-reverse">
+                    
+                    <div @click="imgModal = 'public/images/figma_2_kleurkeuze.jpg'" class="lg:w-2/3 bg-gray-200 flex items-center justify-center p-6 cursor-zoom-in hover:opacity-90 transition">
+                        <img src="public/images/figma_2_kleurkeuze.jpg" alt="Figma Kleurkeuze" class="object-contain w-full h-auto shadow-md rounded-lg max-h-[600px]">
+                    </div>
+
+                    <div class="lg:w-1/3 p-8 flex flex-col justify-center">
+                        <div class="uppercase tracking-wide text-sm text-indigo-600 font-bold">Style Guide</div>
+                        <h3 class="mt-2 text-2xl leading-8 font-extrabold text-gray-900">Kleur & Typografie</h3>
+                        <p class="mt-4 text-gray-600 leading-relaxed">
+                            Voor de kleuren heb ik gekozen voor een palet dat betrouwbaarheid uitstraalt. De typografie is gekozen op basis van leesbaarheid, wat essentieel is voor een stationsomgeving.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+        </main>
+        
+        <footer class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center mt-8">
+            <a href="week_4.html" class="
+                text-base font-semibold text-blue-600 hover:text-blue-800 
+                bg-white shadow-md px-4 py-2 rounded-full 
+                transition duration-200 
+                inline-block hover:shadow-lg
+            ">
+                &larr; Terug naar Week 4
+            </a>
+        </footer>
+
+    </div>
+
+    <div x-show="imgModal" 
+         x-transition:enter="transition ease-out duration-300"
+         x-transition:enter-start="opacity-0"
+         x-transition:enter-end="opacity-100"
+         x-transition:leave="transition ease-in duration-200"
+         x-transition:leave-start="opacity-100"
+         x-transition:leave-end="opacity-0"
+         @click="imgModal = null"
+         class="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 backdrop-blur-sm"
+         style="display: none;">
+        
+        <button @click="imgModal = null" class="absolute top-5 right-5 text-white hover:text-gray-300 focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+
+        <img :src="imgModal" class="max-w-full max-h-full rounded shadow-2xl object-contain" @click.stop>
+    </div>
+
+</body>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</html>
