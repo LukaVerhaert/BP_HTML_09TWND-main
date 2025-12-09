@@ -8,7 +8,7 @@
 </head>
 <body class="min-h-screen bg-cover bg-center bg-indigo-50" style="background-image: url('public/images/achtergrond.jpg');">
     
-    <div class="bg-indigo-30/70 backdrop-blur-sm backdrop-saturate-[0.5] min-h-screen">
+    <div class="bg-indigo-30/70 backdrop-blur-sm backdrop-saturate-[0.3] min-h-screen">
         
         <header class="bg-white shadow-md">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
@@ -48,17 +48,17 @@
                                 <a href="week_3.html" class="block px-4 py-2 text-sm text-gray-900 hover:bg-gray-200" role="menuitem" tabindex="-1">Week 3</a>
                                 <a href="week_4.html" class="block px-4 py-2 text-sm text-gray-900 hover:bg-gray-200" role="menuitem" tabindex="-1">Week 4</a>
                                 <a href="week_5.html" class="block px-4 py-2 text-sm text-gray-900 hover:bg-gray-200" role="menuitem" tabindex="-1">Week 5</a>
-                                <a href="week_6.html" class="block px-4 py-3 text-sm text-gray-900 hover:bg-gray-200" role="menuitem" tabindex="-1">Week 6</a> 
-                               
+                                <a href="week_6.html" class="block px-4 py-2 text-sm text-gray-900 hover:bg-gray-200" role="menuitem" tabindex="-1">Week 6</a> 
+                                
                                 <a href="#" class="block px-4 py-2 text-sm text-gray-400 cursor-default hover:bg-transparent" role="menuitem" tabindex="-1">Week 7: Herfstvakantie</a>
                                 <a href="#" class="block px-4 py-2 text-sm text-gray-400 cursor-default hover:bg-transparent" role="menuitem" tabindex="-1">Week 8: Toetsweek</a>
                                 <a href="#" class="block px-4 py-2 text-sm text-gray-400 cursor-default hover:bg-transparent" role="menuitem" tabindex="-1">Week 9: Brugdag</a>
 
                                 <a href="week_10.html" class="block px-4 py-2 text-sm text-gray-900 hover:bg-gray-200" role="menuitem" tabindex="-1">Week 10</a>
                                 <a href="week_11.html" class="block px-4 py-2 text-sm text-gray-900 hover:bg-gray-200" role="menuitem" tabindex="-1">Week 11</a>
-                                <a href="week_12.html" class="block px-4 py-3 text-sm text-gray-900 hover:bg-gray-200" role="menuitem" tabindex="-1">Week 12</a>
+                                <a href="week_12.html" class="block px-4 py-2 text-sm text-gray-900 hover:bg-gray-200" role="menuitem" tabindex="-1">Week 12</a>
                                 <a href="week_13.html" class="block px-4 py-2 text-sm text-gray-900 hover:bg-gray-200" role="menuitem" tabindex="-1">Week 13</a>
-                             
+                               
                                 <a href="#" class="block px-4 py-2 text-sm text-gray-400 cursor-default hover:bg-transparent" role="menuitem" tabindex="-1">Week 14: Toekomstige Week</a>
                                 
                                 <a href="index.html" class="block px-4 py-2 text-sm text-blue-600 border-t mt-1 hover:bg-gray-100" role="menuitem" tabindex="-1">Naar Hoofdpagina</a>
@@ -72,7 +72,17 @@
                         focus:outline-none focus:ring-2 focus:ring-offset-2 
                         focus:ring-indigo-500 focus:ring-offset-gray-100
                     ">
-                        🎨 Style Guide (Huidig)
+                        <svg xmlns="http://www.w3.org/2000/svg" 
+                            stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" 
+                            class="lucide lucide-palette w-5 h-5 mr-2" 
+                            fill="none" viewBox="0 0 24 24">
+                            <path d="M12 22a1 1 0 0 1 0-20 10 9 0 0 1 10 9 5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8z"/>
+                            <circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/>
+                            <circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/>
+                            <circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/>
+                            <circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/>
+                        </svg>
+                        Style Guide (Huidig)
                     </a>
 
                 </div>
@@ -103,28 +113,30 @@
                     <div class="space-y-2">
                         <div class="h-20 bg-indigo-600 rounded-lg shadow-md"></div>
                         <p class="text-sm font-semibold text-gray-900">Primair (Actie)</p>
-                        <p class="text-xs text-gray-500">Tailwind: indigo-600</p>
+                        <p class="text-xs text-gray-500">Tailwind: **indigo-600**</p>
                     </div>
 
                     <div class="space-y-2">
                         <div class="h-20 bg-blue-500 rounded-lg shadow-md"></div>
                         <p class="text-sm font-semibold text-gray-900">Secundair (Accent)</p>
-                        <p class="text-xs text-gray-500">Tailwind: blue-500</p>
+                        <p class="text-xs text-gray-500">Tailwind: **blue-500**</p>
                     </div>
 
                     <div class="space-y-2">
                         <div class="h-20 bg-gray-900 rounded-lg shadow-md"></div>
                         <p class="text-sm font-semibold text-gray-900">Tekst (Body)</p>
-                        <p class="text-xs text-gray-500">Tailwind: gray-900</p>
+                        <p class="text-xs text-gray-500">Tailwind: **gray-900** / **gray-700**</p>
                     </div>
 
                     <div class="space-y-2">
-                        <div class="h-20 bg-gray-50 border border-gray-200 rounded-lg shadow-md"></div>
-                        <p class="text-sm font-semibold text-gray-900">Achtergrond</p>
-                        <p class="text-xs text-gray-500">Tailwind: gray-50 / white</p>
+                        <div class="h-20 bg-white border border-gray-200 rounded-lg shadow-md"></div>
+                        <p class="text-sm font-semibold text-gray-900">Achtergrond/Kaart</p>
+                        <p class="text-xs text-gray-500">Tailwind: **white** / **indigo-50**</p>
                     </div>
                 </div>
             </section>
+            
+            <hr class="my-12">
 
             <section class="bg-white p-8 rounded-xl shadow-xl mb-12">
                 <h3 class="text-3xl font-bold text-gray-800 mb-6 border-b pb-2">
@@ -141,37 +153,109 @@
                     <h2 class="text-3xl font-bold text-gray-800 border-l-4 border-blue-500 pl-4">
                         H2 - Sectie Hoofd (text-3xl font-bold)
                     </h2>
-                    <h3 class="text-xl font-semibold text-gray-700 border-l-4 border-gray-300 pl-4">
-                        H3 - Subtitel (text-xl font-semibold)
+                    <h3 class="text-2xl font-semibold text-gray-700 border-l-4 border-gray-300 pl-4">
+                        H3 - Subtitel (text-2xl font-semibold)
                     </h3>
                     <p class="text-base text-gray-600 leading-relaxed pt-2">
-                        Body Tekst - Dit is de standaard tekstgrootte voor het lezen van lange paragrafen. Het is ontworpen om ontspannen en helder te zijn op alle apparaten. (text-base)
+                        Body Tekst - Dit is de standaard tekstgrootte voor het lezen van lange paragrafen. Het is ontworpen om ontspannen en helder te zijn op alle apparaten. (**text-base**)
+                    </p>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        Kleine Tekst - Gebruikt voor meta-informatie of datums, zoals in de header van de weekpagina's. (**text-sm**)
                     </p>
                 </div>
             </section>
+            
+            <hr class="my-12">
 
-            <section class="bg-white p-8 rounded-xl shadow-xl">
+            <section class="bg-white p-8 rounded-xl shadow-xl mb-12">
                 <h3 class="text-3xl font-bold text-gray-800 mb-6 border-b pb-2">
                     3. Ruimte & Schaal
                 </h3>
                 <div class="space-y-4 text-gray-700 leading-relaxed">
                     <p>
-                        De schaalverdeling voor marges, padding en gaps is consistent gebaseerd op de **Tailwind CSS spacing scale** (die werkt met veelvouden van 4px).
+                        De schaalverdeling voor marges, padding en gaps is consistent gebaseerd op de **Tailwind CSS spacing scale** (die werkt met veelvouden van **4px**).
                     </p>
-                    <p>
-                        <strong>Voorbeelden:</strong>
-                    </p>
-                    <ul class="list-disc list-inside space-y-2 pl-4">
+                    <div class="grid grid-cols-3 gap-4 text-center">
+                        <div>
+                            <div class="h-4 bg-gray-200 w-2 mx-auto"></div>
+                            <p class="text-xs mt-1">m-2 (8px)</p>
+                        </div>
+                        <div>
+                            <div class="h-4 bg-gray-300 w-6 mx-auto"></div>
+                            <p class="text-xs mt-1">p-6 (24px)</p>
+                        </div>
+                        <div>
+                            <div class="h-4 bg-gray-400 w-12 mx-auto"></div>
+                            <p class="text-xs mt-1">mb-12 (48px)</p>
+                        </div>
+                    </div>
+                    <ul class="list-disc list-inside space-y-2 pl-4 pt-4">
                         <li>
-                            Kleine Ruimte (m-2): Gebruikt voor knoppen of inline elementen (8px).
+                            Kleine Ruimte (**m-2**): Gebruikt voor knoppen of inline elementen (8px).
                         </li>
                         <li>
-                            Gemiddelde Ruimte (p-6): Standaard padding in kaartcomponenten (24px).
+                            Gemiddelde Ruimte (**p-6**): Standaard padding in kaartcomponenten (24px).
                         </li>
                         <li>
-                            Grote Ruimte (mb-12): Wordt gebruikt om secties verticaal te scheiden (48px).
+                            Grote Ruimte (**mb-12**): Wordt gebruikt om secties verticaal te scheiden (48px).
                         </li>
                     </ul>
+                </div>
+            </section>
+            
+            <hr class="my-12">
+
+            <section class="bg-white p-8 rounded-xl shadow-xl">
+                <h3 class="text-3xl font-bold text-gray-800 mb-6 border-b pb-2">
+                    4. Componenten & Patronen 🧩
+                </h3>
+                <p class="mb-6 text-gray-700">
+                    Dit zijn de herbruikbare UI-elementen die door het hele portfolio worden gebruikt.
+                </p>
+
+                <div class="space-y-8">
+                    
+                    <div class="border-b pb-4">
+                        <h4 class="text-xl font-semibold text-gray-900 mb-3">Kaart/Sectie Container</h4>
+                        <div class="bg-gray-100 p-4 rounded-lg border border-gray-200">
+                            <div class="bg-white p-6 rounded-lg shadow-md text-gray-700">
+                                Dit is de basisstructuur voor alle content secties op de weekpagina's.
+                                <code class="block mt-2 text-xs bg-gray-50 p-2 rounded overflow-x-auto">
+                                    &lt;section class="bg-white p-6 rounded-lg shadow"&gt;...&lt;/section&gt;
+                                </code>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="border-b pb-4">
+                        <h4 class="text-xl font-semibold text-gray-900 mb-3">Knoppen (Buttons)</h4>
+                        <div class="flex flex-wrap items-center gap-4 bg-gray-100 p-4 rounded-lg border border-gray-200">
+                            
+                            <a href="#" class="
+                                text-base font-bold text-blue-700 hover:text-blue-900 
+                                bg-white shadow-md px-6 py-2 rounded-full 
+                                transition duration-200 
+                                inline-block hover:shadow-lg hover:-translate-y-0.5 transform
+                            ">
+                                Primaire Actie
+                            </a>
+
+                            <a href="#" class="
+                                group flex items-center gap-2 px-4 py-2 rounded-full
+                                text-white font-medium text-sm
+                                bg-white/10 border border-white/20 backdrop-blur-sm
+                                hover:bg-white/20 transition-all duration-200
+                            ">
+                                Secundaire Navigatie
+                                <span class="transform group-hover:translate-x-1 transition-transform">&rarr;</span>
+                            </a>
+                            
+                        </div>
+                        <p class="text-sm text-gray-700 mt-2">
+                            De **Primaire Knop** (Wit met blauwe tekst, ronde hoeken) wordt gebruikt voor de belangrijkste navigatie (Terug naar Overzicht). De **Secundaire Navigatie Knop** (Doorzichtige, lichtere stijl) wordt gebruikt voor de 'Volgende Week' knop in de footer.
+                        </p>
+                    </div>
+
                 </div>
             </section>
 
