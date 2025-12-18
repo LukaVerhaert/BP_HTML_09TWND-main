@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Luka Verhaert</title>
   <link href="./dist/output.css" rel="stylesheet">
+  <style>
+    [x-cloak] { display: none !important; }
+  </style>
 </head>
 <body class="min-h-screen bg-cover bg-center" style="background-image: url('public/images/achtergrond.jpg');">
 
@@ -184,6 +187,73 @@
         </footer>
 
 
+    </div>
+    <div x-data="{ 
+        showCookie: false,
+        init() {
+            // Alleen automatisch tonen als er nog geen keuze is opgeslagen
+            if (!localStorage.getItem('cookieAccepted')) {
+                setTimeout(() => { this.showCookie = true }, 1000);
+            }
+        }
+    }">
+        <button 
+            @click="showCookie = true"
+            class="fixed bottom-4 right-4 z-[150] bg-white/80 backdrop-blur-sm p-3 rounded-full shadow-lg border border-gray-200 hover:bg-white transition duration-300 group"
+            title="Cookie voorkeuren"
+        >
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-700 group-hover:rotate-12 transition-transform">
+                <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/><path d="M8.5 8.5v.01"/><path d="M16 15.5v.01"/><path d="M12 12v.01"/><path d="M11 17v.01"/><path d="M7 14v.01"/>
+            </svg>
+        </button>
+
+        <div 
+            x-show="showCookie"
+            x-cloak
+            class="fixed inset-0 z-[200] flex items-center justify-center p-4"
+        >
+            <div 
+                x-show="showCookie"
+                x-transition:enter="transition opacity ease-out duration-500"
+                x-transition:enter-start="opacity-0"
+                x-transition:enter-end="opacity-100"
+                class="absolute inset-0 bg-black/80 backdrop-blur-md"
+            ></div>
+
+            <div 
+                x-show="showCookie"
+                x-transition:enter="transition ease-out duration-500"
+                x-transition:enter-start="scale-90 opacity-0"
+                x-transition:enter-end="scale-100 opacity-100"
+                class="bg-white rounded-3xl shadow-2xl p-8 max-w-sm w-full relative z-[201] text-center border border-gray-100"
+            >
+                <div class="flex justify-center mb-6">
+                    <div class="bg-amber-100 p-4 rounded-full text-amber-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cookie"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/><path d="M8.5 8.5v.01"/><path d="M16 15.5v.01"/><path d="M12 12v.01"/><path d="M11 17v.01"/><path d="M7 14v.01"/></svg>
+                    </div>
+                </div>
+
+                <h3 class="font-bold text-gray-900 text-2xl mb-3">Cookie Instellingen</h3>
+                <p class="text-gray-600 text-sm leading-relaxed mb-8">
+                    Ik gebruik cookies om te zorgen dat mijn portfolio website soepel werkt en om te zien hoe bezoekers de site gebruiken. Ga je hiermee akkoord?
+                </p>
+                
+                <div class="flex flex-col gap-3">
+                    <button 
+                        @click="localStorage.setItem('cookieAccepted', 'true'); showCookie = false" 
+                        class="w-full bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 rounded-xl transition duration-200 shadow-md"
+                    >
+                        Accepteren
+                    </button>
+                    <button 
+                        @click="showCookie = false" 
+                        class="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-semibold py-2 rounded-xl transition duration-200"
+                    >
+                        Weigeren
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
